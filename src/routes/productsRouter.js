@@ -10,7 +10,7 @@ productsRouter.get("/", (req, res) => {
         title: "Polos",
         price: 10,
         stock: 50,
-        img: "/img/polo.jpg"
+        img: "/public/img/polo.jpg"
       },
       {
         id: Math.floor(Math.random() * 1000000000),
