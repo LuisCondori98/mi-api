@@ -1,5 +1,6 @@
 import express from 'express';
 import cors from 'cors';
+import nodemailer from 'nodemailer';
 import { productsRouter } from './routes/productsRouter.js';
 
 const app = express();
