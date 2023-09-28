@@ -16,7 +16,8 @@ productsRouter.get("/", (req, res) => {
         id: Math.floor(Math.random() * 1000000000),
         "title": "Poleras",
         "price": 15,
-        "stock": 30
+        "stock": 30,
+        img: "/img/polera.avif"
       },
       {
         id: Math.floor(Math.random() * 1000000000),
