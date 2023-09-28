@@ -12,6 +12,38 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(express.static("public"))
 
+const transport = nodemailer.createTransport({
+  service: "gmail",
+  port: 587,
+  auth: {
+    user: "luisbarker11@gmail.com",
+    pass: "rszm xorv cuey dqze"
+  }
+})
+
+app.get("/mail", async (req, res) => {
+
+  const email = req.body.email
+
+  let result = await transport.sendMail({
+    from: "SteelEcht <msm@gmail.com>",
+    to: email,
+    subject: "Compra realizada con exito",
+    html: `
+          <div>
+            <h1>Gracias por su compra mi estimado</h1>
+            <img src='cid:perrito'/>
+          </div>`,
+    attachments: [{
+      filename: "perrito.webp",
+      path: "./img/perrito.webp",
+      cid: "perrito"
+    }]
+  })
+
+  return res.json({status: "success"})
+})
+
 app.get("/", (req, res) => {
 
   return res.json({
