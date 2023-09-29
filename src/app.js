@@ -26,6 +26,8 @@ app.get("/mail/:email", async (req, res) => {
 
   const email = req.params.email
 
+  console.log(email)
+
   let result = await transport.sendMail({
     from: "SteelEcht <msm@gmail.com>",
     to: email,
@@ -37,7 +39,7 @@ app.get("/mail/:email", async (req, res) => {
           </div>`,
     attachments: [{
       filename: "perrito.webp",
-      path: "./img/perrito.webp",
+      path: "./public/img/polo.jpg",
       cid: "perrito"
     }]
   })
