@@ -35,11 +35,11 @@ app.get("/mail/:email", async (req, res) => {
     html: `
           <div>
             <h1>Gracias por su compra mi estimado</h1>
-            <img src='cid:perrito'/>
+            <img src='/public/img/falda.jpg'/>
           </div>`,
     attachments: [{
-      filename: "perrito.webp",
-      path: "./public/img/polo.jpg",
+      filename: "img.zip",
+      path: "./public/img/img.zip",
       cid: "perrito"
     }]
   })
