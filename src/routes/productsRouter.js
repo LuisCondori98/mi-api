@@ -23,13 +23,15 @@ productsRouter.get("/", (req, res) => {
         id: Math.floor(Math.random() * 1000000000),
         "title": "Faldas",
         "price": 8,
-        "stock": 20
+        "stock": 20,
+        img: "/img/falda.jpg"
       },
       {
         id: Math.floor(Math.random() * 1000000000),
         "title": "Shorts",
         "price": 5,
-        "stock": 10
+        "stock": 10,
+        img: "/img/shorts.webp"
       },
       {
         id: Math.floor(Math.random() * 1000000000),

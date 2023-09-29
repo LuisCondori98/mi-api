@@ -22,9 +22,9 @@ const transport = nodemailer.createTransport({
   }
 })
 
-app.get("/mail", async (req, res) => {
+app.get("/mail/:email", async (req, res) => {
 
-  const email = req.body.email
+  const email = req.params.email
 
   let result = await transport.sendMail({
     from: "SteelEcht <msm@gmail.com>",
