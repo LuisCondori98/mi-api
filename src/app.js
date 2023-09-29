@@ -31,16 +31,16 @@ app.get("/mail/:email", async (req, res) => {
   let result = await transport.sendMail({
     from: "SteelEcht <msm@gmail.com>",
     to: email,
-    subject: "Compra realizada con exito",
+    subject: "Suscripcion",
     html: `
           <div>
-            <h1>Gracias por su compra mi estimado</h1>
+            <h2>Gracias por suscribirte envio el catalogo</h2>
             <img src='/public/img/falda.jpg'/>
           </div>`,
     attachments: [{
-      filename: "img.zip",
-      path: "./public/img/img.zip",
-      cid: "perrito"
+      filename: "CATALOGO.zip",
+      path: "./public/img/CATALOGO.zip",
+      cid: "CATALOGO"
     }]
   })
 
